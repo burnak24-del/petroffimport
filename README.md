@@ -1,4 +1,4 @@
-[petroff_import_лендинг_mvp.html](https://github.com/user-attachments/files/22535649/petroff_import_._mvp.html)
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
