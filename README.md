@@ -1,0 +1,284 @@
+[index.html](https://github.com/user-attachments/files/22538423/index.html)
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Petroff Import — прямой импорт из Китая</title>
+  <meta name="description" content="Снижаем закупочные цены на 15–30%. Доставка от 20 дней. Полный цикл импорта под ключ: поставщики, образцы, логистика, таможня." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+  <style>
+    :root{
+      --bg: #ffffff;
+      --ink: #0f172a;      /* slate-900 */
+      --muted: #475569;    /* slate-600 */
+      --line: #e2e8f0;     /* slate-200 */
+      --brand: #0B3D91;    /* Petroff blue */
+      --brand-ink:#0a377f;
+      --soft: #f8fafc;     /* slate-50 */
+      --radius: 16px;
+      --ring: 0 10px 30px rgba(2, 6, 23, .08);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:'Inter','Manrope',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    a{color:var(--brand);text-decoration:none}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand img{height:48px}
+    .menu{display:flex;gap:18px;align-items:center}
+    .btn{display:inline-flex;gap:10px;align-items:center;justify-content:center;padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:#fff;color:var(--ink);font-weight:700;transition:.2s ease;}
+    .btn:hover{transform:translateY(-1px);box-shadow:var(--ring)}
+    .btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+    .btn.primary:hover{background:var(--brand-ink)}
+
+    /* HERO */
+    .hero{position:relative;isolation:isolate}
+    .hero .media{position:relative;height:56vh;min-height:480px;background:url('images/hero.jpg') center/cover no-repeat}
+    .hero .overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(2,6,23,.0), rgba(2,6,23,.45) 60%, rgba(2,6,23,.70));z-index:0}
+    .hero .content{position:relative;z-index:1;margin-top:-120px}
+    .hero .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:var(--ring);max-width:760px}
+    .kicker{display:inline-block;padding:6px 10px;background:#eef2ff;color:#1e3a8a;border-radius:999px;font-weight:700;font-size:12px;letter-spacing:.4px}
+    .hero h1{font-size:42px;line-height:1.12;margin:12px 0 10px}
+    .lead{font-size:18px;color:var(--muted);margin:0 0 20px}
+
+    /* TRUST bar */
+    .trust{padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--soft)}
+    .trust .logos{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:center;filter:grayscale(100%);opacity:.85}
+
+    /* Sections */
+    .section{padding:80px 0}
+    .section h2{font-size:32px;margin:0 0 18px}
+    .muted{color:var(--muted)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--ring)}
+    .service .media{border-radius:14px;overflow:hidden;border:1px solid var(--line);margin-bottom:12px}
+    .list{display:grid;gap:8px;margin:12px 0 0 0}
+    .list li{display:flex;gap:10px;align-items:flex-start}
+    .list li::before{content:'•';color:var(--brand);font-weight:700;line-height:1.4}
+
+    /* Steps */
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .step{border:1px solid var(--line);border-radius:14px;padding:18px;background:#fff;box-shadow:var(--ring)}
+    .step .nr{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:8px;background:var(--brand);color:#fff;font-weight:700;margin-bottom:8px}
+
+    /* Contacts */
+    .contact{display:grid;grid-template-columns:2fr 1fr;gap:24px}
+    .contact .media{border:1px solid var(--line);border-radius:16px;overflow:hidden}
+
+    footer{background:#0b1220;color:#cbd5e1}
+    footer a{color:#cbd5e1}
+    .footer-wrap{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+
+    @media (max-width:1000px){
+      .grid-3,.grid-4,.steps,.contact{grid-template-columns:1fr}
+      .hero .content{margin-top:-80px}
+      .hero h1{font-size:32px}
+      .brand img{height:44px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><a href="/"><img src="petroff_logo_full_horizontal.png" alt="Petroff Import"></a></div>
+      <nav class="menu">
+        <a href="#about">О компании</a>
+        <a href="#services">Услуги</a>
+        <a href="#benefits">Преимущества</a>
+        <a href="#process">Схема</a>
+        <a href="#contact">Контакты</a>
+        <a class="btn primary" href="#lead">Рассчитать поставку</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="media"></div>
+    <div class="overlay"></div>
+    <div class="container content">
+      <div class="card">
+        <span class="kicker">Прямой импорт из Китая</span>
+        <h1>Снижаем закупочные цены на 15–30%. Доставка от 20 дней. Полный цикл «под ключ».</h1>
+        <p class="lead">Поиск и проверка поставщиков, образцы перед заказом, логистика (авиа/авто/ж/д/море), таможенное оформление и доставка до вашего склада.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap">
+          <a class="btn primary" href="#lead">Рассчитать поставку</a>
+          <a class="btn" href="#services">Наши услуги</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust">
+    <div class="container">
+      <div class="logos">
+        <img src="images/trust-1.png" alt="Клиент">
+        <img src="images/trust-2.png" alt="Клиент">
+        <img src="images/trust-3.png" alt="Клиент">
+        <img src="images/trust-4.png" alt="Клиент">
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section" style="background:var(--soft)">
+    <div class="container">
+      <h2>Услуги</h2>
+      <div class="grid-4">
+        <div class="card service">
+          <div class="media"><img src="images/services-1.jpg" alt="Подбор поставщиков"></div>
+          <h3>Подбор и проверка поставщиков</h3>
+          <p class="muted">Анализ номенклатуры, проверка контрагентов, аудиты фабрик, согласование условий и MOQ.</p>
+          <ul class="list">
+            <li>Сравнение предложений по цене/качеству</li>
+            <li>Проверка юридической чистоты контрагента</li>
+          </ul>
+        </div>
+        <div class="card service">
+          <div class="media"><img src="images/services-2.jpg" alt="Качество и инспекция"></div>
+          <h3>Образцы и инспекция</h3>
+          <p class="muted">Образцы перед заказом, инспекция партии, контроль упаковки и брендинга.</p>
+          <ul class="list">
+            <li>Фото/видео‑отчёты и чек‑листы</li>
+            <li>Согласование эталона качества</li>
+          </ul>
+        </div>
+        <div class="card service">
+          <div class="media"><img src="images/services-3.jpg" alt="Логистика"></div>
+          <h3>Доставка и страхование</h3>
+          <p class="muted">Авиа, авто, ж/д, море. Консолидация, страхование, трекинг статуса.</p>
+          <ul class="list">
+            <li>Маршруты под скорость или цену</li>
+            <li>Отчёты по движению груза</li>
+          </ul>
+        </div>
+        <div class="card service">
+          <div class="media"><img src="images/services-4.jpg" alt="Таможня"></div>
+          <h3>Оформление ВЭД</h3>
+          <p class="muted">Коды ТН ВЭД, сертификация, расчёт пошлин и НДС, юридическое сопровождение.</p>
+          <ul class="list">
+            <li>«Белое» оформление</li>
+            <li>Снижение рисков и задержек</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section id="benefits" class="section">
+    <div class="container">
+      <h2>Преимущества</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Экономия 15–30%</h3>
+          <p class="muted">Прямой импорт и оптимизированная логистика.</p>
+        </div>
+        <div class="card">
+          <h3>Сроки 20–40 дней</h3>
+          <p class="muted">Выбор оптимального маршрута под задачу.</p>
+        </div>
+        <div class="card">
+          <h3>Персональный менеджер</h3>
+          <p class="muted">Контроль сделки на каждом этапе.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section" style="background:var(--soft)">
+    <div class="container">
+      <div class="grid-3" style="grid-template-columns:1.2fr 1fr 1fr;align-items:center;gap:24px">
+        <div>
+          <h2>О компании</h2>
+          <p class="muted">Petroff Import — партнёр по прямому импорту из Китая. Мы берём на себя поиск производителей, согласование, образцы, логистику, таможенное оформление и доставку до вашего склада.</p>
+          <p class="muted">Работаем прозрачно: фиксируем условия, сроки и предоставляем отчётность на каждом этапе.</p>
+        </div>
+        <div class="card"><img src="images/about.jpg" alt="Офис/Команда"></div>
+        <div class="card"><img src="images/services-2.jpg" alt="Процессы/Инспекция"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="section">
+    <div class="container">
+      <h2>Как мы работаем</h2>
+      <div class="steps">
+        <div class="step"><div class="nr">1</div><h4>Заявка</h4><p class="muted">Список позиций и требования к качеству.</p></div>
+        <div class="step"><div class="nr">2</div><h4>Подбор</h4><p class="muted">Поиск фабрик, проверка контрагентов, условия.</p></div>
+        <div class="step"><div class="nr">3</div><h4>Образцы</h4><p class="muted">Образцы/инспекция и утверждение эталона.</p></div>
+        <div class="step"><div class="nr">4</div><h4>Поставка</h4><p class="muted">Отгрузка, таможня, доставка до склада.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAD & CONTACT -->
+  <section id="lead" class="section" style="background:var(--soft)">
+    <div class="container contact">
+      <div class="card">
+        <h2>Заявка на расчёт поставки</h2>
+        <form id="leadForm" autocomplete="off" style="display:grid;gap:14px">
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
+            <div><label style="font-size:12px;color:var(--muted)">Имя</label><input required placeholder="Иван" style="width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px"></div>
+            <div><label style="font-size:12px;color:var(--muted)">Компания</label><input required placeholder="ООО «Пример»" style="width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px"></div>
+            <div><label style="font-size:12px;color:var(--muted)">Телефон</label><input required type="tel" placeholder="+7 (___) ___‑__‑__" style="width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px"></div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
+            <div><label style="font-size:12px;color:var(--muted)">Email</label><input required type="email" placeholder="name@company.ru" style="width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px"></div>
+            <div><label style="font-size:12px;color:var(--muted)">Категория</label>
+              <select required style="width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px">
+                <option value="">Выберите</option>
+                <option>Автозапчасти</option>
+                <option>Электроника</option>
+                <option>Текстиль</option>
+                <option>Мебель</option>
+                <option>Иное</option>
+              </select>
+            </div>
+            <div><label style="font-size:12px;color:var(--muted)">Приоритет</label>
+              <select style="width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px">
+                <option>Скорость</option>
+                <option>Стоимость</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label style="font-size:12px;color:var(--muted)">Описание товара / артикулы</label>
+            <textarea rows="4" placeholder="Кратко опишите позиции, объёмы, требования к качеству и упаковке" style="width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px"></textarea>
+          </div>
+          <div style="display:flex;gap:12px;align-items:center">
+            <button class="btn primary" type="submit">Отправить заявку</button>
+            <p id="leadOut" style="margin:0;color:var(--muted)"></p>
+          </div>
+        </form>
+      </div>
+      <div class="media"><img src="images/contact-map.jpg" alt="Карта/офис"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-wrap">
+      <div>© <span id="y"></span> Petroff Import. Все права защищены.</div>
+      <div style="display:flex;gap:14px"><a href="#">Политика конфиденциальности</a><a href="#">Договор оферты</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const leadForm = document.getElementById('leadForm');
+    const out = document.getElementById('leadOut');
+    leadForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      out.textContent = 'Спасибо! Мы свяжемся с вами в ближайшее время.';
+      leadForm.reset();
+    });
+  </script>
+</body>
+</html>
