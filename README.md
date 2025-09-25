@@ -97,40 +97,7 @@
           <a class="btn" href="#services">Наши услуги</a>
         </div>
       </div>
-      <form id="calcForm" class="hero-card" autocomplete="off">
-        <div class="field">
-          <label>Категория товара</label>
-          <select required>
-            <option value="">Выберите категорию</option>
-            <option>Автозапчасти</option>
-            <option>Электроника</option>
-            <option>Текстиль</option>
-            <option>Мебель</option>
-            <option>Прочее</option>
-          </select>
-        </div>
-        <div class="grid-3">
-          <div class="field">
-            <label>Вес, кг</label>
-            <input type="number" min="1" step="0.1" placeholder="например, 120" required />
-          </div>
-          <div class="field">
-            <label>Объём, м³</label>
-            <input type="number" min="0.01" step="0.01" placeholder="например, 2.4" required />
-          </div>
-          <div class="field">
-            <label>Способ доставки</label>
-            <select required>
-              <option value="air">Авиа</option>
-              <option value="rail" selected>Ж/Д</option>
-              <option value="sea">Море</option>
-              <option value="road">Авто</option>
-            </select>
-          </div>
-        </div>
-        <button class="btn primary" type="submit" style="width:100%">Оценить стоимость и срок</button>
-        <p id="calcOut" class="small" style="margin-top:8px"></p>
-      </form>
+      
     </div>
   </section>
 
